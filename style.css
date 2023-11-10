@@ -299,9 +299,15 @@ input:focus{
 }
 
 @media(max-width:700px) {
+  body{
+    height: 100%;
+    padding: 2rem 0;
+  }
+
   div.layout{
     grid-template-columns: 1fr;
     grid-template-rows: 35% 65%;
+    top: 0;
   }
 
   .left{
