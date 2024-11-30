@@ -1,92 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
-  <script src="script.js" defer></script>
-  
-  <link rel="stylesheet" href="style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div class="layout">
-    <div class="left"></div>
-    <div class="right"></div>
-  </div>
-  <div class="container" id="container">
-    <div class="left-content">
-      <div class="cards-div">
-        <div class="card card-front">
-          <img class="card-image" src="images/bg-card-front.png" alt="">
-          <div class="top">
-            <img src="images/card-logo.svg" alt="">
-          </div>
-          <div class="row numbers">
-            <p class="number" id="number">0000 0000 0000 0000</p>
-          </div>
-          <div class="row space-around">
-            <p id="name">Jane Appleseed</p>
-            <p id="expire-date"><span id="month">00</span>/<span id="year">00</span></p>
-          </div>
-        </div>
-        <div class="card card-back">
-          <img class="card-image" src="images/bg-card-back.png" alt="">
-          <div id="card-code">000</div>
-        </div>
-      </div>
+    <title>Frontend Mentor | Interactive card details form</title>
+    <script src="script.js" defer></script>
 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="left"></div>
+      <div class="right"></div>
     </div>
-    <div class="right-content" data-status="active" id="right-content">
-      <form action="">
-        <div class="input">
-          <label for="">Cardholder Name</label>
-          <input type="text" id="name-input" placeholder="e.g. Jane Appleseed" maxlength="30">
-        </div>
-        <div class="input cardnumber">
-          <label for="">Card Number</label>
-          <input type="text" id="card-number-input" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
-        </div>
-        <div class="form-data-3">
-          <div class="dates">
-            <label class="item-1" for="">Exp. Date (MM/YY)</label>
-            <div class="">
-              <div class="column">
-                <input class="item-2" type="text" id="month-input" placeholder="MM" maxlength="2">
-              </div>
-              <div class="column">
-                <input class="item-3" type="text" id="year-input" placeholder="YY" maxlength="2">
-              </div>
+    <div class="container" id="container">
+      <div class="left-content">
+        <div class="cards-div">
+          <div class="card card-front">
+            <img class="card-image" src="images/bg-card-front.png" alt="" />
+            <div class="top">
+              <img src="images/card-logo.svg" alt="" />
+            </div>
+            <div class="row numbers">
+              <p class="number" id="number">0000 0000 0000 0000</p>
+            </div>
+            <div class="row space-around">
+              <p id="name">Jane Appleseed</p>
+              <p id="expire-date">
+                <span id="month">00</span>/<span id="year">00</span>
+              </p>
             </div>
           </div>
-          <div class="cvc">
-            <label for="">CVC</label>
-            <input class="" type="text" id="cvc-input" placeholder="e.g. 123" maxlength="3">
+          <div class="card card-back">
+            <img class="card-image" src="images/bg-card-back.png" alt="" />
+            <div id="card-code">000</div>
           </div>
         </div>
-        <button class="btn" type="button" id="confirm">confirm</button>
-      </form>
+      </div>
+      <div class="right-content" data-status="active" id="right-content">
+        <form action="">
+          <div class="input">
+            <label for="">Cardholder Name</label>
+            <input
+              type="text"
+              id="name-input"
+              placeholder="e.g. Jane Appleseed"
+              maxlength="30"
+            />
+          </div>
+          <div class="input cardnumber">
+            <label for="">Card Number</label>
+            <input
+              type="text"
+              id="card-number-input"
+              placeholder="e.g. 1234 5678 9123 0000"
+              maxlength="19"
+            />
+          </div>
+          <div class="form-data-3">
+            <div class="dates">
+              <label class="item-1" for="">Exp. Date (MM/YY)</label>
+              <div class="">
+                <div class="column">
+                  <input
+                    class="item-2"
+                    type="text"
+                    id="month-input"
+                    placeholder="MM"
+                    maxlength="2"
+                  />
+                </div>
+                <div class="column">
+                  <input
+                    class="item-3"
+                    type="text"
+                    id="year-input"
+                    placeholder="YY"
+                    maxlength="2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="cvc">
+              <label for="">CVC</label>
+              <input
+                class=""
+                type="text"
+                id="cvc-input"
+                placeholder="e.g. 123"
+                maxlength="3"
+              />
+            </div>
+          </div>
+          <button class="btn" type="button" id="confirm">confirm</button>
+        </form>
+      </div>
+      <div class="completed" id="completed" data-status="inactive">
+        <img src="images/icon-complete.svg" alt="" class="icon" />
+        <div class="title">Thank you!</div>
+        <div class="description">We've added your card details</div>
+        <button type="button" class="btn" id="continue">Continue</button>
+      </div>
     </div>
-    <div class="completed" id="completed" data-status="inactive">
-      <img src="images/icon-complete.svg" alt="" class="icon">
-      <div class="title">Thank you!</div>
-      <div class="description">We've added your card details</div>
-      <button type="button" class="btn" id="continue">Continue</button>
-    </div>
-  </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Julian Caminaur</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Julian Caminaur</a>.
+    </div>
+  </body>
 </html>
